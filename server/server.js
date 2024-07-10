@@ -30,10 +30,13 @@ module.exports = function runServer() {
   // --------------------Run Server---------------------------
   const port = process.env.PORT || 4000;
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
   app.listen(port, () => {
     console.log(`App running on :${port}`);
   });
 
 
 };
-
